@@ -1,11 +1,19 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-forgot-password',
-  imports: [],
+  standalone: true,
+  imports: [FormsModule, RouterLink],
   templateUrl: './forgot-password.html',
-  styleUrl: './forgot-password.scss'
+  styleUrls: ['./forgot-password.scss']
 })
 export class ForgotPassword {
+  email = '';
 
+  onSubmit() {
+    console.log('Sending password reset link to:', this.email);
+    // Later: backend will send reset email
+  }
 }

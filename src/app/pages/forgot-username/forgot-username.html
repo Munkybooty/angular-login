@@ -1,1 +1,13 @@
-<p>forgot-username works!</p>
+<div class="form-container">
+  <h2>Forgot Username</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label>Email:</label>
+      <input type="email" [(ngModel)]="email" name="email" required />
+    </div>
+    <button type="submit">Recover Username</button>
+  </form>
+  <div class="links">
+    <a routerLink="/login">Back to Login</a>
+  </div>
+</div>

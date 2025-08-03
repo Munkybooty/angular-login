@@ -1,11 +1,19 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-forgot-username',
-  imports: [],
+  standalone: true,
+  imports: [FormsModule, RouterLink],
   templateUrl: './forgot-username.html',
-  styleUrl: './forgot-username.scss'
+  styleUrls: ['./forgot-username.scss']
 })
 export class ForgotUsername {
+  email = '';
 
+  onSubmit() {
+    console.log('Recovering username for email:', this.email);
+    // Later: call backend endpoint to email the username
+  }
 }
