@@ -1,1 +1,17 @@
-<p>security-questions works!</p>
+<div class="form-container">
+  <h2>Answer Security Questions</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label>What is your mother’s maiden name?</label>
+      <input type="text" [(ngModel)]="answer1" name="answer1" required />
+    </div>
+    <div>
+      <label>What was your first pet’s name?</label>
+      <input type="text" [(ngModel)]="answer2" name="answer2" required />
+    </div>
+    <button type="submit">Submit Answers</button>
+  </form>
+  <div class="links">
+    <a routerLink="/login">Back to Login</a>
+  </div>
+</div>
